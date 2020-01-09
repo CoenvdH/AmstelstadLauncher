@@ -1,5 +1,11 @@
+const { app, BrowserWindow } = require('electron');
+// ....
+// if(require('electron-squirrel-startup')) app.quit();
+
+const nativeImage = require('electron').nativeImage;
+    var image = nativeImage.createFromPath(__dirname + '/icon.ico'); 
+
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
 const path = require('path')
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -11,10 +17,19 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    icon: image,
+    resizable: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   })
+
+  mainWindow.setMenuBarVisibility(false)
+
+  mainWindow.webContents.on('new-window', function(e, url) {
+    e.preventDefault();
+    require('electron').shell.openExternal(url);
+  });
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
