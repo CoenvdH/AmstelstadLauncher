@@ -13,8 +13,10 @@ var mainLoopId = setInterval(function(){
 
     if(updatetime < 0 ) {
         updatetime = 60 - (Math.abs(updatetime))
+        document.getElementById("updatetime").textContent=updatetime + " minuten geleden";
+    }else if(updatetime < 1) {
         document.getElementById("updatetime").textContent="zojuist";
-    }else if(updatetime <= 1) {
+    }else if(updatetime == 1) {
         document.getElementById("updatetime").textContent=updatetime + " minuut geleden";
     }else if(updatetime == "offline") {
         document.getElementById("updatetime").textContent="Offline";
@@ -22,8 +24,10 @@ var mainLoopId = setInterval(function(){
         document.getElementById("updatetime").textContent=updatetime + " minuten geleden";
     }
 
-    document.getElementById("playercount").textContent=playercount;
+    document.getElementById("playercount").textContent=playercount.replace("/", " / ");
     document.getElementById("serverip").textContent=serverip;
 
+    var connectbtn = "fivem://connect/" + serverip
+    document.getElementById("connectbtn").href=connectbtn;
 
 }, 500);

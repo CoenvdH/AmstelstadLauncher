@@ -1,0 +1,130 @@
+:root {
+    --primary-color: #50CC75
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Bold';
+    src: url('SourceSansPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: url('SourceSansPro-Regular.ttf') format('truetype');
+}
+
+body {
+    background: url('./bg.png');
+    margin: unset;
+    overflow: hidden;
+}
+
+a {
+    font-family: 'SourceSansPro-Bold', sans-serif;
+    font-size: 30px;
+    color: var(--primary-color);
+    text-decoration: none;
+
+    -moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+    -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+    -ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+}
+
+a:hover {
+    color: #84db9e;
+}
+
+#website {
+    position: fixed;
+    text-shadow: 0px 0px 40px #50CC75;
+    top: 108px;
+    left: 150px;
+}
+
+#discord {
+    position: fixed;
+    height: 75px;
+    left: 1180px;
+    top: 40px;
+    filter: drop-shadow(0px 0px 40px #50CC75);
+}
+
+#instagram {
+    position: fixed;
+    height: 78px;
+    left: 1075px;
+    top: 36px;
+    filter: drop-shadow(0px 0px 40px #50CC75);
+}
+
+#launch {
+    height: 70px;
+    width: 275px;
+}
+
+#connectbtn {
+    position: fixed;
+    top: 655px;
+    left: 60px;
+    filter: drop-shadow(0px 0px 15px #50CC75);
+}
+
+#launch-text {
+    font-family: 'SourceSansPro-Bold', sans-serif;
+    color: white;
+    position: fixed;
+    z-index: 2;
+    top: 654px;
+    left: 95px;
+}
+
+#user-svg {
+    position: fixed;
+    height: 42px;
+    color: white;
+    top: 670px;
+    left: 400px;
+}
+
+#playercount-text {
+    font-family: 'SourceSansPro-Regular', sans-serif;
+    color: white;
+    position: fixed;
+    top: 646px;
+    left: 470px;
+    font-size: 27px;
+}
+
+#server-svg {
+    position: fixed;
+    color: white;
+    height: 42px;
+    top: 670px;
+    left: 615px;
+}
+
+#server-text {
+    font-family: 'SourceSansPro-Regular', sans-serif;
+    color: white;
+    position: fixed;
+    top: 646px;
+    left: 675px;
+    font-size: 27px;
+}
+
+#update-svg {
+    position: fixed;
+    color: white;
+    height: 42px;
+    top: 670px;
+    left: 970px;
+}
+
+#update-text {
+    font-family: 'SourceSansPro-Regular', sans-serif;
+    color: white;
+    position: fixed;
+    top: 645px;
+    left: 1030px;
+    font-size: 27px;
+}
