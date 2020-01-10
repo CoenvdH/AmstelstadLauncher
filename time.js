@@ -28,6 +28,6 @@ var mainLoopId = setInterval(function(){
     document.getElementById("serverip").textContent=serverip;
 
     var connectbtn = "fivem://connect/" + serverip
-    document.getElementById("connectbtn").href=connectbtn;
+    document.getElementById("launchbtn").href=connectbtn;
 
 }, 500);
