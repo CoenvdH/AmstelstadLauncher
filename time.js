@@ -6,8 +6,8 @@ var mainLoopId = setInterval(function(){
     var myDate = new Date(apidate).toLocaleString(undefined, options);
     var epochMin = new Date(epoch).toLocaleString(undefined, options);
 
-    console.log("EPOCH " + epochMin + "\n",
-                "API " + myDate)
+    // console.log("EPOCH " + epochMin + "\n",
+    //             "API " + myDate)
     
     updatetime = epochMin - myDate;
 
