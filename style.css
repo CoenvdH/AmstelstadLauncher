@@ -71,6 +71,7 @@ a:hover {
     left: 1180px;
     top: 145px;
     filter: drop-shadow(0px 0px 40px #50CC75);
+    z-index: 2;
 }
 
 #launch {
@@ -149,7 +150,8 @@ a:hover {
 
 #launchbtn {
     color: white;
-    padding: 10px 25px;
+    font-size: 28px;
+    padding: 11.2px 33.34px;
     background: var(--primary-color);
 
     -moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
@@ -214,4 +216,47 @@ a:hover {
     -webkit-transition: opacity 0.25s ease-in-out;
     transition: opacity 0.25s ease-in-out;
 }
+
+.spinner-box {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    left: 1061px;
+    top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    opacity: 0;
+  }
+  
+  .circle-border {
+    width: 76px;
+    height: 76px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgb(63,249,220);
+    background: linear-gradient(0deg, rgba(80,204, 117,0.1) 33%, rgba(80,204,117,1) 100%);
+    animation: spin .8s linear 0s infinite;
+  }
+  
+  .circle-core {
+    width: 100%;
+    height: 100%;
+    background-color: #2e323c;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+  }
 
