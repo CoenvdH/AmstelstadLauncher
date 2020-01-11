@@ -1,6 +1,7 @@
 var playercount = "";
 var serverip = "";
 var apidate = "";
+var votes = "";
 
 const options = {
     minute: "2-digit"
@@ -26,9 +27,11 @@ function API() {
         playercount = data.playerscount.toString();
         serverip = data.ip.toString();
         apidate = data.date
+        votes = data.votes.toString();
         console.log("PLAYERCOUNT " + playercount + "\n",
                     "SERVERIP " + serverip + "\n",
-                    "APIDATE " + apidate + "\n")
+                    "APIDATE " + apidate + "\n",
+                    "VOTES " + votes + "\n")
     }
     // Send request
     request.send()

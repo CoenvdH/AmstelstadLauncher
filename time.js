@@ -26,6 +26,7 @@ var mainLoopId = setInterval(function(){
 
     document.getElementById("playercount").textContent=playercount.replace("/", " / ");
     document.getElementById("serverip").textContent=serverip;
+    document.getElementById("votes").textContent=votes;
 
     var connectbtn = "fivem://connect/" + serverip
     document.getElementById("launchbtn").href=connectbtn;
