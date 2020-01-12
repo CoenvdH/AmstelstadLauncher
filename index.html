@@ -15,7 +15,6 @@
 
   <a id="website" href="https://www.amstelstad.net" target="_blank">www.amstelstad.net</a>
 
-  <!-- <a href="https://discord.gg/G9e4J9A" target="_blank"><img id="discord" src="./discord.png"></a> -->
   <a href="https://discord.gg/G9e4J9A" target="_blank">
     <svg id="discord" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="discord"
       class="svg-inline--fa fa-discord fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -55,16 +54,12 @@
   </a>
 
   <div class="spinner-box" id="spinner-box">
-    <div class="circle-border">
+    <div class="circle-border" id="circle-border">
       <div class="circle-core"></div>
     </div>
   </div>
 
   <h3 id="steam-text">Start</h3>
-
-  <!-- <a href="" id="connectbtn">
-    <svg id="launch" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square-full" class="svg-inline--fa fa-square-full fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 512H0V0h512v512z"></path></svg>
-  </a> -->
 
   <h4 id="launch-text"><a href="" id="launchbtn">Launch Amstelstad</a></h4>
 
@@ -108,6 +103,21 @@
         document.getElementById('spinner-box').style.opacity = '0';
       }, 5000);
     }
+
+    // var loader = document.querySelector('.cirle-border');
+    var degrees = 0;
+    var runner;
+
+    runner = setInterval(function () {
+      degrees++;
+      document.getElementById('circle-border').style.webkitTransform = 'rotate(' + degrees + 'deg)';
+    }, 1)
+
+    $("#steam-redirect").hover(function () {
+      $('#steam-text').addClass('steam-text-opacity');
+    }, function () {
+      $('#steam-text').removeClass('steam-text-opacity');
+    });
   </script>
 </body>
 

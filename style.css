@@ -18,6 +18,12 @@ body {
     overflow: hidden;
 }
 
+.steam-text-opacity {
+    opacity: 1 !important;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+}
+
 a {
     font-family: 'SourceSansPro-Bold', sans-serif;
     font-size: 30px;
@@ -47,6 +53,7 @@ a:hover {
     left: 1180px;
     top: 40px;
     filter: drop-shadow(0px 0px 40px #50CC75);
+    z-index: 2;
 }
 
 #instagram {
@@ -55,6 +62,7 @@ a:hover {
     left: 1075px;
     top: 36px;
     filter: drop-shadow(0px 0px 40px #50CC75);
+    z-index: 2;
 }
 
 #trackyvote {
@@ -205,17 +213,18 @@ a:hover {
     font-family: 'SourceSansPro-Bold', sans-serif;
     color: white;
     position: fixed;
+    z-index: 2;
     opacity: 0;
     top: 125px;
     left: 1075px;
     font-size: 30px;
 }
 
-#steam-redirect:hover + #steam-text {
+/* #steam-redirect:hover + #steam-text {
     opacity: 1;
     -webkit-transition: opacity 0.25s ease-in-out;
     transition: opacity 0.25s ease-in-out;
-}
+} */
 
 .spinner-box {
     width: 300px;
@@ -238,9 +247,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: rgb(63,249,220);
     background: linear-gradient(0deg, rgba(80,204, 117,0.1) 33%, rgba(80,204,117,1) 100%);
-    animation: spin .8s linear 0s infinite;
   }
   
   .circle-core {
