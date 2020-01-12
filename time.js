@@ -1,5 +1,10 @@
 var updatetime = "";
 
+if(serverip == "") {
+    serverip = "31.204.150.193:30120";
+    console.log("Dikke boktor");
+};
+
 var mainLoopId = setInterval(function(){
     var epoch = Math.round(new Date().getTime());
 
